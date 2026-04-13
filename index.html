@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魔法少女的魔女审判 - 角色性格测试</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 背景装饰 -->
+    <div class="bg-decoration">
+        <div class="spider-web top-left"></div>
+        <div class="spider-web top-right"></div>
+        <div class="spider-web bottom-left"></div>
+        <div class="spider-web bottom-right"></div>
+        <div class="butterfly butterfly-1"></div>
+        <div class="butterfly butterfly-2"></div>
+        <div class="butterfly butterfly-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- 首页 -->
+        <div id="home" class="page active">
+            <div class="game-title">
+                <h1>魔法少女的魔女审判</h1>
+                <div class="title-decoration">
+                    <div class="cross"></div>
+                    <div class="cross"></div>
+                </div>
+            </div>
+            
+            <div class="intro-container">
+                <div class="intro-frame">
+                    <div class="intro-content">
+                        <p class="mystery-text">"我们之中混入了一位魔女。"</p>
+                        <p>在这个与世隔绝的孤岛监狱中，13位少女被囚禁于此。</p>
+                        <p>她们各自背负着不同的过去，拥有独特的魔法能力。</p>
+                        <p>通过这场测试，找出你最像的那位角色吧。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-buttons">
+                <button class="menu-btn start-btn" onclick="startQuiz()">
+                    <span class="btn-text">开始测试</span>
+                    <div class="btn-decoration"></div>
+                </button>
+            </div>
+        </div>
+
+        <!-- 测试页面 -->
+        <div id="quiz" class="page">
+            <div class="progress-container">
+                <div class="progress-label">测试进度</div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="question-number" id="questionNumber">问题 1/20</div>
+            </div>
+            
+            <div class="question-container">
+                <div class="question-frame">
+                    <div class="question" id="questionText"></div>
+                </div>
+                
+                <div class="options" id="options"></div>
+            </div>
+        </div>
+
+        <!-- 结果页面 -->
+        <div id="result" class="page">
+            <div class="result-title">
+                <h2>测试结果</h2>
+                <div class="title-decoration small">
+                    <div class="cross"></div>
+                </div>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-frame">
+                    <div class="character-image" id="characterImage"></div>
+                    <div class="character-info">
+                        <h2 id="characterName"></h2>
+                        <div class="mbti-type" id="mbtiType"></div>
+                        <div class="character-desc" id="characterDesc"></div>
+                        <div class="character-traits" id="characterTraits"></div>
+                        <div class="character-magic" id="characterMagic"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result-stats" id="resultStats"></div>
+            
+            <div class="menu-buttons">
+                <button class="menu-btn restart-btn" onclick="restartQuiz()">
+                    <span class="btn-text">重新测试</span>
+                    <div class="btn-decoration"></div>
+                </button>
+                <button class="menu-btn share-btn" onclick="shareResult()">
+                    <span class="btn-text">分享结果</span>
+                    <div class="btn-decoration"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
