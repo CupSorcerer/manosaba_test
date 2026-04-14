@@ -1,0 +1,14 @@
+ema:#ffc0cb
+hiro:#ff0000
+coco:#b24f36
+shirley:#5f7fb6
+hanna:#788f0f
+ann:#6a5acd
+noah:#2eb0b1
+reia:#feb459
+miria:#b4a175
+nanoka:#0B0D13
+mag:#bc7def
+arisa:#aa1003
+meruru:#afb2b3
+yuki:#E8E9FD

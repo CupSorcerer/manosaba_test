@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- BGM音频 -->
+    <audio id="bgm" loop>
+        <source src="bgm—迷宮の徒.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- BGM控制按钮 -->
+    <button id="bgmToggle" class="bgm-toggle" onclick="toggleBGM()">
+        <span class="bgm-icon">🎵</span>
+        <span class="bgm-text">BGM</span>
+    </button>
+    
     <!-- 背景装饰 -->
     <div class="bg-decoration">
         <div class="spider-web top-left"></div>

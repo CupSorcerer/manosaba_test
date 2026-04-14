@@ -4,6 +4,7 @@ const characters = {
         name: "樱羽艾玛",
         emoji: "🌸",
         image: "image/ema.png",
+        color: "#ffc0cb",
         mbti: "ENFJ",
         desc: "自称'ボク'的温柔女孩。虽然笨手笨脚，但内心坚强不屈。头脑聪明，能冷静观察并做出判断。十分怕寂寞，渴望与人亲近。",
         traits: ["温柔善良", "怕寂寞", "推理能力强", "坚强意志", "表里不一"],
@@ -14,6 +15,7 @@ const characters = {
         name: "二阶堂希罗",
         emoji: "⚔️",
         image: "image/hiro.png",
+        color: "#ff0000",
         mbti: "ESTJ",
         desc: "成绩优异、运动全能、家世良好，完美无缺。怀有强烈的责任感和自尊心，价值观永远只有'正确'与'不正确'。渴望一个没有恶人的纯净世界。",
         traits: ["完美主义", "责任感强", "追求正确", "偏执", "纤细内心"],
@@ -24,6 +26,7 @@ const characters = {
         name: "泽渡可可",
         emoji: "📱",
         image: "image/coco.png",
+        color: "#b24f36",
         mbti: "ISFP",
         desc: "喜欢直播的辣妹风格少女。厌恶除自己和自推以外的其他人，但内心渴望被关注。有着'躲藏'的创伤，是杀人案的唯一幸存者。",
         traits: ["直播爱好者", "自推至上", "毒舌", "孤独", "创伤深"],
@@ -34,6 +37,7 @@ const characters = {
         name: "橘雪莉",
         emoji: "🔍",
         image: "image/shirley.png",
+        color: "#5f7fb6",
         mbti: "ESFP",
         desc: "自称名侦探的活力少女。性格天然脱线，无论何时都面带笑容。有着令旁人震惊的好奇心，绝大多数情况下都能忽视气氛。",
         traits: ["活力满满", "名侦探", "天然", "好奇心旺盛", "忽视气氛"],
@@ -44,6 +48,7 @@ const characters = {
         name: "远野汉娜",
         emoji: "🎀",
         image: "image/hanna.png",
+        color: "#788f0f",
         mbti: "ESFJ",
         desc: "说话操着奇特大小姐口吻的少女。身材娇小，外表酷似洋娃娃。本性善良，对关系好的人会展现更多优点。有着'被抛弃'的创伤。",
         traits: ["大小姐口吻", "善良", "好面子", "缝纫技艺", "被抛弃创伤"],
@@ -54,6 +59,7 @@ const characters = {
         name: "夏目安安",
         emoji: "📖",
         image: "image/ann.png",
+        color: "#6a5acd",
         mbti: "INFP",
         desc: "脾气古怪、爱好写小说的少女。不擅长与人交流，性格拘谨。会通过素描本笔谈，使用模仿大文豪的夸张口吻。",
         traits: ["内向", "小说家", "笔谈交流", "体弱多病", "渴望幸福"],
@@ -64,6 +70,7 @@ const characters = {
         name: "城崎诺亚",
         emoji: "🎨",
         image: "image/noah.png",
+        color: "#2eb0b1",
         mbti: "ENFP",
         desc: "蒙面街头艺术家'气球'。不怕生，说话拉长尾音。性格我行我素，好奇心旺盛。怀抱画出理想作品的愿望。",
         traits: ["艺术家", "好奇心旺盛", "我行我素", "专注画画", "情感丰富"],
@@ -74,6 +81,7 @@ const characters = {
         name: "莲见蕾雅",
         emoji: "🎭",
         image: "image/reia.png",
+        color: "#feb459",
         mbti: "ENTJ",
         desc: "志愿成为明星演员的剧团少女。举止绅士，常充当'拧绳人'。性格独立，不愿依赖他人，背负着沉重的压力。",
         traits: ["演员", "领袖气质", "独立", "勤奋", "渴望关注"],
@@ -84,6 +92,7 @@ const characters = {
         name: "佐伯米莉亚",
         emoji: "🎬",
         image: "image/miria.png",
+        color: "#b4a175",
         mbti: "ISFJ",
         desc: "自称'大叔'的白辣妹。喜欢看老电影，性格沉稳老实。为人温和善良，很会照顾他人，但做事笨手笨脚。",
         traits: ["大叔自称", "温和善良", "照顾他人", "笨手笨脚", "法律理解"],
@@ -94,6 +103,7 @@ const characters = {
         name: "黑部奈叶香",
         emoji: "🔫",
         image: "image/nanoka.png",
+        color: "#0B0D13",
         mbti: "ISTP",
         desc: "对监牢抱有强烈敌意的少女。平常冷若冰霜，情绪少有起伏。习惯单人行动，对监牢结构十分熟悉。",
         traits: ["冷若冰霜", "单人行动", "为达目的不择手段", "熟悉监牢", "复仇心"],
@@ -104,6 +114,7 @@ const characters = {
         name: "宝生玛格",
         emoji: "🎪",
         image: "image/mag.png",
+        color: "#bc7def",
         mbti: "ENTP",
         desc: "年仅十五岁的诈骗专家。观察力敏锐，口才了得。以'不相信，不指望'为行动原则，笑容和言行并非出自真心。",
         traits: ["诈骗师", "观察敏锐", "口才了得", "不信任他人", "内心孤独"],
@@ -114,6 +125,7 @@ const characters = {
         name: "紫藤亚里沙",
         emoji: "🔥",
         image: "image/arisa.png",
+        color: "#aa1003",
         mbti: "ESTP",
         desc: "离家出走的'太妹'。语气粗鲁，话里带刺。讨厌自己，内心渴望有人能够接纳如此尖刺外露的自己。",
         traits: ["太妹", "语气粗鲁", "讨厌自己", "渴望接纳", "火焰魔法"],
@@ -124,6 +136,7 @@ const characters = {
         name: "冰上梅露露",
         emoji: "💝",
         image: "image/meruru.png",
+        color: "#afb2b3",
         mbti: "INFJ",
         desc: "容易过度忧虑、在意他人的少女。只要对某人产生在意，便会无意中尾随对方。最喜欢独自一人阅读书本的时光。",
         traits: ["过度忧虑", "在意他人", "喜欢阅读", "治愈魔法", "温柔体贴"],
@@ -134,6 +147,7 @@ const characters = {
         name: "月代雪",
         emoji: "❄️",
         image: "image/yuki.png",
+        color: "#E8E9FD",
         mbti: "INTJ",
         desc: "真正的大魔女，游戏的隐藏人物和最终boss。怀着对人类的恨意，定下了精密的复仇计划。是魔女中唯一的幸存者。",
         traits: ["大魔女", "复仇心", "精密计划", "孤独", "强大魔力"],
@@ -377,6 +391,26 @@ function selectOption(scores) {
 }
 
 // 显示结果
+// 辅助函数：调整颜色亮度
+function adjustBrightness(hex, percent) {
+    const num = parseInt(hex.replace("#", ""), 16);
+    const amt = Math.round(2.55 * percent);
+    const R = (num >> 16) + amt;
+    const G = (num >> 8 & 0x00FF) + amt;
+    const B = (num & 0x0000FF) + amt;
+    return "#" + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 +
+        (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 +
+        (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1);
+}
+
+// 辅助函数：将十六进制颜色转换为RGBA
+function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
 function showResult() {
     document.getElementById('quiz').classList.remove('active');
     document.getElementById('result').classList.add('active');
@@ -386,6 +420,9 @@ function showResult() {
     
     // 找到最匹配的角色
     const character = findBestMatch(mbti);
+    
+    // 应用角色主题色
+    applyCharacterTheme(character.color);
     
     // 显示角色信息
     document.getElementById('characterImage').innerHTML = `<img src="${character.image}" alt="${character.name}" class="character-portrait">`;
@@ -408,6 +445,20 @@ function showResult() {
     
     // 显示统计数据
     showStats();
+}
+
+// 应用角色主题色
+function applyCharacterTheme(primaryColor) {
+    const root = document.documentElement;
+    const darkerColor = adjustBrightness(primaryColor, -30);
+    const lighterColor = adjustBrightness(primaryColor, 20);
+    
+    // 设置CSS变量
+    root.style.setProperty('--character-color', primaryColor);
+    root.style.setProperty('--character-color-dark', darkerColor);
+    root.style.setProperty('--character-color-light', lighterColor);
+    root.style.setProperty('--character-color-rgba', hexToRgba(primaryColor, 0.3));
+    root.style.setProperty('--character-color-rgba-light', hexToRgba(primaryColor, 0.1));
 }
 
 // 计算MBTI类型
@@ -495,5 +546,106 @@ function shareResult() {
         navigator.clipboard.writeText(text).then(() => {
             alert('结果已复制到剪贴板！');
         });
+    }
+}
+
+// BGM控制
+let bgmPlaying = false;
+let bgm = null;
+let bgmToggle = null;
+
+// 页面加载时尝试自动播放BGM
+document.addEventListener('DOMContentLoaded', function() {
+    // 在DOM加载完成后获取元素
+    bgm = document.getElementById('bgm');
+    bgmToggle = document.getElementById('bgmToggle');
+    
+    // 尝试自动播放（可能被浏览器阻止）
+    if (bgm) {
+        bgm.volume = 0.5; // 设置音量为50%
+        const playPromise = bgm.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                bgmPlaying = true;
+                updateBGMButton();
+            }).catch(() => {
+                // 自动播放被阻止，等待用户交互
+                bgmPlaying = false;
+                updateBGMButton();
+            });
+        }
+    }
+});
+
+// 用户首次点击页面时尝试播放（解决浏览器自动播放策略）
+document.addEventListener('click', function() {
+    if (!bgmPlaying && bgm && bgm.paused) {
+        bgm.play().then(() => {
+            bgmPlaying = true;
+            updateBGMButton();
+        }).catch(() => {
+            // 播放失败
+        });
+    }
+}, { once: true });
+
+// 淡入淡出函数
+function fadeAudio(targetVolume, duration = 500) {
+    if (!bgm) return;
+    
+    const startVolume = bgm.volume;
+    const volumeDiff = targetVolume - startVolume;
+    const steps = 20;
+    const stepTime = duration / steps;
+    let currentStep = 0;
+    
+    const fadeInterval = setInterval(() => {
+        currentStep++;
+        const progress = currentStep / steps;
+        bgm.volume = startVolume + (volumeDiff * progress);
+        
+        if (currentStep >= steps) {
+            clearInterval(fadeInterval);
+            bgm.volume = targetVolume;
+        }
+    }, stepTime);
+}
+
+function toggleBGM() {
+    if (!bgm) return;
+    
+    if (bgmPlaying) {
+        // 淡出效果
+        fadeAudio(0, 500);
+        setTimeout(() => {
+            bgm.pause();
+            bgmPlaying = false;
+            updateBGMButton();
+        }, 500);
+    } else {
+        bgm.volume = 0;
+        bgm.play().then(() => {
+            bgmPlaying = true;
+            // 淡入效果
+            fadeAudio(0.5, 500);
+            updateBGMButton();
+        }).catch(() => {
+            alert('无法播放音频，请检查浏览器设置');
+        });
+    }
+}
+
+function updateBGMButton() {
+    if (!bgmToggle) return;
+    
+    if (bgmPlaying) {
+        bgmToggle.classList.remove('paused');
+        bgmToggle.querySelector('.bgm-icon').textContent = '🎵';
+        bgmToggle.querySelector('.bgm-text').textContent = 'BGM';
+    } else {
+        bgmToggle.classList.add('paused');
+        bgmToggle.querySelector('.bgm-icon').textContent = '🔇';
+        bgmToggle.querySelector('.bgm-text').textContent = '静音';
     }
 }
