@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>魔法少女的魔女审判 - 角色性格测试</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
     <!-- BGM音频 -->
@@ -14,7 +16,7 @@
     
     <!-- BGM控制按钮 -->
     <button id="bgmToggle" class="bgm-toggle" onclick="toggleBGM()">
-        <span class="bgm-icon">🎵</span>
+        <i class="ph ph-speaker-high bgm-icon"></i>
         <span class="bgm-text">BGM</span>
     </button>
     
@@ -53,8 +55,10 @@
             
             <div class="menu-buttons">
                 <button class="menu-btn start-btn" onclick="startQuiz()">
+                    <i class="ph ph-play-circle btn-icon"></i>
                     <span class="btn-text">开始测试</span>
                     <div class="btn-decoration"></div>
+                    <div class="btn-glow"></div>
                 </button>
             </div>
         </div>
@@ -104,12 +108,16 @@
             
             <div class="menu-buttons">
                 <button class="menu-btn restart-btn" onclick="restartQuiz()">
+                    <i class="ph ph-arrow-counter-clockwise btn-icon"></i>
                     <span class="btn-text">重新测试</span>
                     <div class="btn-decoration"></div>
+                    <div class="btn-glow"></div>
                 </button>
                 <button class="menu-btn share-btn" onclick="shareResult()">
+                    <i class="ph ph-share-network btn-icon"></i>
                     <span class="btn-text">分享结果</span>
                     <div class="btn-decoration"></div>
+                    <div class="btn-glow"></div>
                 </button>
             </div>
         </div>

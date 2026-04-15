@@ -159,183 +159,183 @@ const characters = {
 // 测试题目
 const questions = [
     {
-        question: "当你来到一个陌生的环境（比如魔女监狱），你会？",
+        question: "深夜听到牢房外有奇怪的声音，你会？",
         options: [
-            { text: "主动和其他人搭话，尽快融入集体", scores: { E: 10, I: 0 } },
-            { text: "先观察一段时间，再决定如何行动", scores: { E: 3, I: 7 } },
-            { text: "独自探索环境，不太想和别人交流", scores: { E: 0, I: 10 } },
-            { text: "找看起来友好的人，小心翼翼地接近", scores: { E: 5, I: 5 } }
+            { text: "好奇地想去查看是什么", scores: { E: 5, N: 10, P: 8 } },
+            { text: "叫醒室友，一起商量对策", scores: { E: 7, F: 5, J: 3 } },
+            { text: "保持警惕，准备应对危险", scores: { I: 5, S: 8, T: 5, J: 5 } },
+            { text: "用被子蒙住头，假装没听见", scores: { I: 8, S: 5, F: 5, P: 3 } }
         ]
     },
     {
-        question: "面对困难和危险时，你更倾向于？",
+        question: "你的同伴突然被看守带走了，你会？",
         options: [
-            { text: "凭直觉和勇气立即行动", scores: { S: 0, N: 10 } },
-            { text: "冷静分析情况，制定计划", scores: { S: 5, N: 5 } },
-            { text: "根据实际情况和经验判断", scores: { S: 10, N: 0 } },
-            { text: "寻求他人帮助，共同面对", scores: { S: 5, N: 5 } }
+            { text: "拔出烧火棍和看守对拼", scores: { E: 5, S: 8, T: 5, P: 7 } },
+            { text: "冷静分析，一定是有什么原因才把ta带走", scores: { I: 3, N: 8, T: 7, J: 5 } },
+            { text: "试图和看守交涉", scores: { E: 7, F: 7, J: 3 } },
+            { text: "好可怕啊，要不还是先溜吧", scores: { I: 8, S: 5, F: 5, P: 5 } }
         ]
     },
     {
-        question: "在做决定时，你更重视？",
+        question: "监狱里举办了一场舞台剧，你会？",
         options: [
-            { text: "逻辑和道理，什么是对的", scores: { T: 10, F: 0 } },
-            { text: "他人的感受和关系的和谐", scores: { T: 0, F: 10 } },
-            { text: "实际情况和可行性", scores: { T: 7, F: 3 } },
-            { text: "自己的价值观和信念", scores: { T: 5, F: 5 } }
+            { text: "积极报名参加，想要展现自己", scores: { E: 10, N: 5, F: 5, P: 7 } },
+            { text: "在台下为参加者加油打气", scores: { E: 5, F: 8, J: 3 } },
+            { text: "觉得无聊，宁愿回牢房看书", scores: { I: 10, S: 3, T: 5, J: 5 } },
+            { text: "观察每个人的表现，分析性格", scores: { I: 5, N: 8, T: 7, J: 3 } }
         ]
     },
     {
-        question: "你的日常生活更倾向于？",
+        question: "在监狱的庭院里，你发现了一朵从未见过的奇异花朵，你会？",
         options: [
-            { text: "有计划地安排，按部就班", scores: { J: 10, P: 0 } },
-            { text: "随性而为，灵活应对", scores: { J: 0, P: 10 } },
-            { text: "大体有计划，但允许变化", scores: { J: 6, P: 4 } },
-            { text: "根据当天心情决定", scores: { J: 2, P: 8 } }
+            { text: "好奇地研究它的特性", scores: { E: 3, N: 10, T: 5, P: 7 } },
+            { text: "觉得漂亮，想要摘下来装饰牢房", scores: { E: 5, S: 8, F: 7, P: 5 } },
+            { text: "怀疑是否有毒，保持距离", scores: { I: 3, S: 8, T: 7, J: 5 } },
+            { text: "叫其他人一起来看", scores: { E: 10, F: 5, P: 5 } }
         ]
     },
     {
-        question: "如果你发现了凶案的线索，你会？",
+        question: "典狱长宣布要举行一场'魔女审判'，输的人将受到惩罚，你会？",
         options: [
-            { text: "立刻大声说出自己的推理", scores: { E: 8, S: 3, N: 7 } },
-            { text: "先私下调查，确认后再说", scores: { E: 2, S: 7, N: 3 } },
-            { text: "默默观察，收集更多证据", scores: { E: 0, S: 5, N: 5 } },
-            { text: "找信任的人商量对策", scores: { E: 5, S: 5, N: 5 } }
+            { text: "主动站出来担任辩护者", scores: { E: 8, T: 5, F: 5, J: 5 } },
+            { text: "收集证据，准备充分的辩护材料", scores: { I: 5, S: 7, T: 7, J: 8 } },
+            { text: "感到恐惧，希望审判快点结束", scores: { I: 5, S: 5, F: 8, P: 3 } },
+            { text: "思考如何利用审判找出真正的魔女", scores: { I: 3, N: 10, T: 8, J: 5 } }
         ]
     },
     {
-        question: "面对他人的误解和指责，你会？",
+        question: "一位你不太喜欢的同伴遇到了麻烦，你会？",
         options: [
-            { text: "激烈反驳，证明自己的清白", scores: { T: 7, F: 3 } },
-            { text: "感到受伤，但选择忍耐", scores: { T: 2, F: 8 } },
-            { text: "冷静解释，用事实说话", scores: { T: 10, F: 0 } },
-            { text: "试图理解对方为何这样认为", scores: { T: 3, F: 7 } }
+            { text: "尽管不喜欢，还是会帮忙", scores: { F: 10, J: 3 } },
+            { text: "看她平时怎么对我，再决定帮不帮", scores: { T: 7, S: 5, J: 5 } },
+            { text: "分析帮忙的利弊后再行动", scores: { T: 10, N: 3, J: 5 } },
+            { text: "找其他人一起去帮忙", scores: { E: 7, F: 7, P: 3 } }
         ]
     },
     {
-        question: "在团队中，你通常扮演什么角色？",
+        question: "监狱里传来消息说'我们之中混入了一位魔女'，你的反应是？",
         options: [
-            { text: "领导者和决策者", scores: { E: 7, T: 7, J: 7 } },
-            { text: "协调者和支持者", scores: { E: 5, F: 8, J: 5 } },
-            { text: "创意者和点子王", scores: { N: 8, P: 8 } },
-            { text: "执行者和实干家", scores: { S: 8, J: 7 } }
+            { text: "立刻开始观察每个人的可疑之处", scores: { E: 5, S: 7, T: 7, J: 5 } },
+            { text: "感到不安，但选择相信同伴", scores: { I: 3, F: 10, J: 3 } },
+            { text: "冷静思考，制定找出魔女的计划", scores: { I: 5, N: 7, T: 8, J: 8 } },
+            { text: "觉得很有趣，想要揭开真相", scores: { E: 7, N: 8, P: 8 } }
         ]
     },
     {
-        question: "你更向往哪种生活方式？",
+        question: "在审判中有人指控你是魔女，你会？",
         options: [
-            { text: "被众人关注和喜爱", scores: { E: 10, F: 5 } },
-            { text: "安静独处，做自己喜欢的事", scores: { I: 10, N: 5 } },
-            { text: "追求真理和正义", scores: { T: 10, J: 5 } },
-            { text: "自由自在，无拘无束", scores: { P: 10, S: 3, N: 7 } }
+            { text: "愤怒地反驳，要求对方拿出证据", scores: { E: 8, T: 7, J: 3 } },
+            { text: "感到委屈，眼眶都红了", scores: { I: 5, F: 10, J: 0 } },
+            { text: "冷静分析对方的动机和证据", scores: { I: 3, N: 5, T: 10, J: 5 } },
+            { text: "试图用幽默化解尴尬气氛", scores: { E: 7, F: 5, P: 8 } }
         ]
     },
     {
-        question: "如果你的朋友犯了错，你会？",
+        question: "你发现了一条可能通往外界的密道，但可能会遇到危险，你会？",
         options: [
-            { text: "直接指出错误，帮助改正", scores: { T: 9, F: 1 } },
-            { text: "委婉提醒，照顾对方感受", scores: { T: 3, F: 7 } },
-            { text: "视情况而定，看严重程度", scores: { T: 5, F: 5 } },
-            { text: "先安慰，等合适时机再谈", scores: { T: 1, F: 9 } }
+            { text: "立刻召集同伴一起探索", scores: { E: 10, S: 5, T: 3, P: 7 } },
+            { text: "先独自探查，确认安全再告诉大家", scores: { I: 8, S: 7, T: 5, J: 5 } },
+            { text: "仔细规划路线和应急预案", scores: { I: 3, N: 5, T: 7, J: 10 } },
+            { text: "觉得太危险，还是等待更好的机会", scores: { I: 5, S: 8, F: 5, J: 3 } }
         ]
     },
     {
-        question: "面对未知的危险和谜团，你的反应是？",
+        question: "一位同伴向你表白说她喜欢你，但你只把她当朋友，你会？",
         options: [
-            { text: "兴奋，想要解开谜团", scores: { N: 10, E: 5 } },
-            { text: "恐惧，但会勇敢面对", scores: { S: 5, F: 5 } },
-            { text: "谨慎，先确保自身安全", scores: { S: 10, J: 5 } },
-            { text: "好奇，想要一探究竟", scores: { N: 8, P: 7 } }
+            { text: "直接但委婉地说明自己的感受", scores: { E: 5, T: 7, F: 3, J: 5 } },
+            { text: "担心伤害她，说话支支吾吾", scores: { I: 5, F: 10, P: 3 } },
+            { text: "分析这段关系对团体的影响", scores: { T: 10, N: 3, J: 5 } },
+            { text: "尝试慢慢疏远，让她自己明白", scores: { I: 8, F: 5, P: 5 } }
         ]
     },
     {
-        question: "你更重视过去的经验还是未来的可能性？",
+        question: "来到魔女监狱的第一晚，你发现牢房里有奇怪的涂鸦，你会？",
         options: [
-            { text: "过去的经验和教训", scores: { S: 10, N: 0 } },
-            { text: "未来的可能性和梦想", scores: { S: 0, N: 10 } },
-            { text: "两者都重要，需要平衡", scores: { S: 5, N: 5 } },
-            { text: "专注于当下的现实", scores: { S: 7, N: 3 } }
+            { text: "兴奋地想研究这些涂鸦的含义", scores: { E: 5, N: 10, T: 3, P: 7 } },
+            { text: "觉得是不祥之兆，感到害怕", scores: { I: 5, S: 5, F: 8, J: 3 } },
+            { text: "仔细观察，试图找出规律", scores: { I: 3, S: 8, T: 7, J: 5 } },
+            { text: "找室友商量，看看大家怎么想", scores: { E: 8, F: 7, J: 3 } }
         ]
     },
     {
-        question: "在紧张的氛围中，你通常会？",
+        question: "监狱里发生了一起失窃事件，你的东西被偷了，你会？",
         options: [
-            { text: "试图活跃气氛，讲笑话", scores: { E: 8, F: 5 } },
-            { text: "保持沉默，观察局势", scores: { I: 8, T: 5 } },
-            { text: "分析情况，寻找解决方案", scores: { T: 8, J: 5 } },
-            { text: "安慰紧张的人，给予支持", scores: { F: 10, E: 3 } }
+            { text: "愤怒地要求彻查，找出小偷", scores: { E: 7, T: 8, J: 7 } },
+            { text: "感到难过，但选择原谅小偷", scores: { I: 5, F: 10, P: 3 } },
+            { text: "分析谁最有动机和机会", scores: { I: 3, N: 8, T: 8, J: 5 } },
+            { text: "加强防范，避免再次被盗", scores: { S: 8, T: 5, J: 7 } }
         ]
     },
     {
-        question: "你认为什么是真正的强大？",
+        question: "一位同伴因为魔法失控而受伤，你会？",
         options: [
-            { text: "保护他人的力量", scores: { F: 8, J: 5 } },
-            { text: "坚持正义的勇气", scores: { T: 8, J: 7 } },
-            { text: "面对困难的坚韧", scores: { S: 5, T: 5 } },
-            { text: "理解和包容的心", scores: { F: 10, N: 3 } }
+            { text: "立刻使用治愈魔法或寻求帮助", scores: { E: 5, F: 10, J: 3 } },
+            { text: "分析魔法失控的原因，防止再次发生", scores: { I: 3, N: 7, T: 8, J: 5 } },
+            { text: "陪伴在旁，给予情感支持", scores: { I: 5, F: 10, P: 3 } },
+            { text: "检查周围环境是否还有危险", scores: { S: 8, T: 7, J: 5 } }
         ]
     },
     {
-        question: "如果你有一个秘密，你会？",
+        question: "你发现同伴中有人在偷偷使用魔法，按规定这是禁止的，你会？",
         options: [
-            { text: "深埋心底，绝不告诉任何人", scores: { I: 10, T: 3 } },
-            { text: "只告诉最信任的人", scores: { I: 6, F: 5 } },
-            { text: "适当的时候会说出来", scores: { E: 3, J: 3 } },
-            { text: "其实很想找人倾诉", scores: { E: 6, F: 6 } }
+            { text: "当场指出，维护规则", scores: { E: 7, T: 8, J: 10 } },
+            { text: "私下提醒她小心，别被发现", scores: { I: 5, F: 8, P: 3 } },
+            { text: "观察她的魔法类型，判断是否有威胁", scores: { I: 3, N: 7, T: 7, J: 5 } },
+            { text: "装作没看见，不想惹麻烦", scores: { I: 5, F: 3, P: 7 } }
         ]
     },
     {
-        question: "面对他人的痛苦，你的反应是？",
+        question: "在监狱图书馆里，你发现了一本关于魔女历史的书，你会？",
         options: [
-            { text: "感同身受，想要帮助", scores: { F: 10, N: 3 } },
-            { text: "理性分析，提供解决方案", scores: { T: 10, S: 3 } },
-            { text: "陪伴在旁，给予安慰", scores: { F: 8, I: 3 } },
-            { text: "视情况而定", scores: { T: 5, F: 5 } }
+            { text: "兴奋地想要读完整本书", scores: { I: 5, N: 8, T: 5, P: 7 } },
+            { text: "只读与当前处境相关的部分", scores: { S: 8, T: 7, J: 5 } },
+            { text: "做详细笔记，整理关键信息", scores: { I: 3, S: 5, T: 5, J: 10 } },
+            { text: "觉得晦涩难懂，还是去干别的", scores: { E: 5, S: 8, P: 7 } }
         ]
     },
     {
-        question: "你更喜欢哪种工作环境？",
+        question: "监狱组织了一次团体活动，要求大家分组合作，你会？",
         options: [
-            { text: "有明确规则和流程", scores: { S: 5, J: 10 } },
-            { text: "自由灵活，可以创新", scores: { N: 7, P: 10 } },
-            { text: "和谐友好的团队氛围", scores: { F: 8, E: 5 } },
-            { text: "独立工作，不受干扰", scores: { I: 10, T: 3 } }
+            { text: "主动担任组长，带领大家", scores: { E: 10, T: 5, J: 8 } },
+            { text: "配合组长，做好分配的任务", scores: { E: 5, S: 7, F: 5, J: 7 } },
+            { text: "提出创意点子，让活动更有趣", scores: { E: 7, N: 8, P: 8 } },
+            { text: "希望能独自完成任务", scores: { I: 10, S: 5, T: 5, J: 3 } }
         ]
     },
     {
-        question: "当你生气时，你会？",
+        question: "你发现一位同伴在偷偷哭泣，你会？",
         options: [
-            { text: "直接表达出来", scores: { E: 7, T: 5 } },
-            { text: "压抑在心里", scores: { I: 8, F: 5 } },
-            { text: "找方式发泄", scores: { E: 5, P: 5 } },
-            { text: "冷静分析原因", scores: { T: 8, J: 3 } }
+            { text: "走过去询问发生了什么", scores: { E: 8, F: 8, J: 3 } },
+            { text: "默默递上纸巾，陪在身边", scores: { I: 5, F: 10, P: 3 } },
+            { text: "分析她哭泣的原因和背景", scores: { I: 3, N: 5, T: 8, J: 5 } },
+            { text: "给她一些独处空间，稍后再关心", scores: { I: 8, F: 5, J: 5 } }
         ]
     },
     {
-        question: "你认为友谊最重要的是？",
+        question: "监狱里开始流传关于你的谣言，说你和看守有勾结，你会？",
         options: [
-            { text: "互相理解和支持", scores: { F: 10, N: 3 } },
-            { text: "共同的兴趣和目标", scores: { S: 5, T: 5 } },
-            { text: "忠诚和信任", scores: { F: 7, J: 7 } },
-            { text: "能一起开心玩耍", scores: { E: 7, P: 5 } }
+            { text: "当众澄清，要求造谣者道歉", scores: { E: 10, T: 7, J: 5 } },
+            { text: "感到受伤，躲起来独自难过", scores: { I: 10, F: 10, P: 0 } },
+            { text: "调查谣言的源头，找出幕后黑手", scores: { I: 5, N: 8, T: 8, J: 5 } },
+            { text: "相信清者自清，时间会证明一切", scores: { I: 5, F: 5, J: 3 } }
         ]
     },
     {
-        question: "面对人生的挫折，你会？",
+        question: "你得知有一位同伴背负着沉重的过去，你会？",
         options: [
-            { text: "从中学习，重新站起来", scores: { T: 7, J: 7 } },
-            { text: "需要时间来治愈伤痛", scores: { F: 9, I: 3 } },
-            { text: "寻求他人的帮助", scores: { F: 6, E: 4 } },
-            { text: "用其他事情转移注意力", scores: { P: 8, S: 3 } }
+            { text: "主动接近她，想要帮助她走出阴影", scores: { E: 8, F: 10, J: 3 } },
+            { text: "尊重她的隐私，等她愿意说时再倾听", scores: { I: 5, F: 8, J: 5 } },
+            { text: "分析她的过去对现在的影响", scores: { I: 3, N: 7, T: 8, J: 3 } },
+            { text: "每个人都有过去，不必特别关注", scores: { T: 7, S: 5, P: 5 } }
         ]
     },
     {
-        question: "你最害怕什么？",
+        question: "当你终于有机会逃离魔女监狱时，你会？",
         options: [
-            { text: "被他人讨厌和孤立", scores: { F: 8, E: 5 } },
-            { text: "做错事，失去正义", scores: { T: 8, J: 5 } },
-            { text: "失去重要的人", scores: { F: 10, S: 3 } },
-            { text: "无法掌控的局面", scores: { J: 8, N: 3 } }
+            { text: "立刻行动，机不可失", scores: { E: 5, S: 5, T: 5, P: 10 } },
+            { text: "确保所有同伴都能一起逃走", scores: { E: 5, F: 10, J: 5 } },
+            { text: "制定详细的逃脱计划", scores: { I: 3, N: 5, T: 7, J: 10 } },
+            { text: "有些舍不得这里认识的朋友", scores: { I: 5, F: 10, S: 5, J: 0 } }
         ]
     }
 ];
@@ -426,7 +426,7 @@ function showResult() {
     
     // 显示角色信息
     document.getElementById('characterImage').innerHTML = `<img src="${character.image}" alt="${character.name}" class="character-portrait">`;
-    document.getElementById('characterName').innerHTML = `<span class="character-emoji">${character.emoji}</span>${character.name}`;
+    document.getElementById('characterName').innerHTML = `<i class="ph-fill ph-star character-icon"></i>${character.name}`;
     document.getElementById('mbtiType').textContent = `${character.mbti}型 - ${mbti}`;
     document.getElementById('characterDesc').textContent = character.desc;
     
@@ -639,13 +639,16 @@ function toggleBGM() {
 function updateBGMButton() {
     if (!bgmToggle) return;
     
+    const icon = bgmToggle.querySelector('.bgm-icon');
+    const text = bgmToggle.querySelector('.bgm-text');
+    
     if (bgmPlaying) {
         bgmToggle.classList.remove('paused');
-        bgmToggle.querySelector('.bgm-icon').textContent = '🎵';
-        bgmToggle.querySelector('.bgm-text').textContent = 'BGM';
+        icon.className = 'ph ph-speaker-high bgm-icon';
+        text.textContent = 'BGM';
     } else {
         bgmToggle.classList.add('paused');
-        bgmToggle.querySelector('.bgm-icon').textContent = '🔇';
-        bgmToggle.querySelector('.bgm-text').textContent = '静音';
+        icon.className = 'ph ph-speaker-slash bgm-icon';
+        text.textContent = '静音';
     }
 }
