@@ -179,9 +179,9 @@ const questions = [
     {
         question: "监狱里举办了一场舞台剧，你会？",
         options: [
-            { text: "积极报名参加，想要展现自己", scores: { E: 10, N: 5, F: 5, P: 7 } },
+            { text: "好欸，我去我去！", scores: { E: 10, N: 5, F: 5, P: 7 } },
             { text: "在台下为参加者加油打气", scores: { E: 5, F: 8, J: 3 } },
-            { text: "觉得无聊，宁愿回牢房看书", scores: { I: 10, S: 3, T: 5, J: 5 } },
+            { text: "好无聊，还不如回娱乐室看恐怖片呢", scores: { I: 10, S: 3, T: 5, J: 5 } },
             { text: "观察每个人的表现，分析性格", scores: { I: 5, N: 8, T: 7, J: 3 } }
         ]
     },
@@ -332,7 +332,7 @@ const questions = [
     {
         question: "当你终于有机会逃离魔女监狱时，你会？",
         options: [
-            { text: "立刻行动，机不可失", scores: { E: 5, S: 5, T: 5, P: 10 } },
+            { text: "管他呢，先润再说", scores: { E: 5, S: 5, T: 5, P: 10 } },
             { text: "确保所有同伴都能一起逃走", scores: { E: 5, F: 10, J: 5 } },
             { text: "制定详细的逃脱计划", scores: { I: 3, N: 5, T: 7, J: 10 } },
             { text: "有些舍不得这里认识的朋友", scores: { I: 5, F: 10, S: 5, J: 0 } }
@@ -343,6 +343,30 @@ const questions = [
 // 全局变量
 let currentQuestion = 0;
 let userScores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+let shuffledQuestions = [];
+
+// Fisher-Yates 洗牌算法
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+// 打乱题目和选项
+function shuffleQuestionsAndOptions() {
+    // 打乱题目顺序
+    shuffledQuestions = shuffleArray(questions).map(q => {
+        // 深拷贝题目并打乱选项顺序
+        const shuffledQuestion = {
+            ...q,
+            options: shuffleArray(q.options)
+        };
+        return shuffledQuestion;
+    });
+}
 
 // 开始测试
 function startQuiz() {
@@ -350,16 +374,20 @@ function startQuiz() {
     document.getElementById('quiz').classList.add('active');
     currentQuestion = 0;
     userScores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+    
+    // 每次开始测试时打乱题目和选项
+    shuffleQuestionsAndOptions();
+    
     showQuestion();
 }
 
 // 显示问题
 function showQuestion() {
-    const question = questions[currentQuestion];
-    const progress = ((currentQuestion + 1) / questions.length) * 100;
+    const question = shuffledQuestions[currentQuestion];
+    const progress = ((currentQuestion + 1) / shuffledQuestions.length) * 100;
     
     document.getElementById('progress').style.width = progress + '%';
-    document.getElementById('questionNumber').textContent = `问题 ${currentQuestion + 1}/${questions.length}`;
+    document.getElementById('questionNumber').textContent = `问题 ${currentQuestion + 1}/${shuffledQuestions.length}`;
     document.getElementById('questionText').textContent = question.question;
     
     const optionsContainer = document.getElementById('options');
@@ -368,6 +396,7 @@ function showQuestion() {
     question.options.forEach((option, index) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
+        btn.style.setProperty('--index', index);
         btn.textContent = option.text;
         btn.onclick = () => selectOption(option.scores);
         optionsContainer.appendChild(btn);
@@ -383,7 +412,7 @@ function selectOption(scores) {
     
     currentQuestion++;
     
-    if (currentQuestion < questions.length) {
+    if (currentQuestion < shuffledQuestions.length) {
         showQuestion();
     } else {
         showResult();
@@ -527,6 +556,9 @@ function showStats() {
 function restartQuiz() {
     document.getElementById('result').classList.remove('active');
     document.getElementById('home').classList.add('active');
+    
+    // 重置打乱的问题数组，下次开始测试时会重新打乱
+    shuffledQuestions = [];
 }
 
 // 分享结果
