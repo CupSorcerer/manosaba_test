@@ -721,6 +721,37 @@ body {
     animation: float-glow 2s infinite ease-in-out;
 }
 
+.character-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.character-header h2 {
+    font-size: 2.2em;
+    color: #f0e6d2;
+    text-shadow: 0 0 10px var(--character-color-rgba);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.5s ease;
+    margin: 0;
+}
+
+.similarity {
+    font-size: 1.1em;
+    color: var(--character-color);
+    background: var(--character-color-rgba-light);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--character-color-dark);
+    font-weight: bold;
+    animation: glow-pulse 3s infinite;
+}
+
 .mbti-type {
     display: inline-block;
     padding: 10px 25px;
@@ -783,6 +814,40 @@ body {
 .character-magic strong {
     color: var(--character-color);
     font-size: 1.1em;
+}
+
+.character-evaluation {
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(26, 15, 22, 0.9), var(--character-color-rgba-light));
+    border: 2px solid var(--character-color-dark);
+    border-radius: 12px;
+    text-align: left;
+    margin-top: 25px;
+    position: relative;
+    font-size: 1.05em;
+    line-height: 1.9;
+    color: #e8dcc8;
+    box-shadow: 
+        0 5px 20px var(--character-color-rgba),
+        inset 0 0 30px var(--character-color-rgba-light);
+    transition: all 0.5s ease;
+    animation: border-glow 4s infinite;
+}
+
+.character-evaluation:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 10px 30px var(--character-color-rgba),
+        0 0 40px var(--glow-color),
+        inset 0 0 40px var(--character-color-rgba-light);
+}
+
+.character-evaluation i {
+    color: var(--character-color);
+    font-size: 1.5em;
+    margin-right: 10px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 5px var(--glow-color));
 }
 
 /* 结果统计 */

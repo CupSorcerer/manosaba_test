@@ -448,7 +448,9 @@ function showResult() {
     const mbti = calculateMBTI();
     
     // 找到最匹配的角色
-    const character = findBestMatch(mbti);
+    const matchResult = findBestMatch(mbti);
+    const character = matchResult.character;
+    const similarity = matchResult.similarity;
     
     // 应用角色主题色
     applyCharacterTheme(character.color);
@@ -456,6 +458,7 @@ function showResult() {
     // 显示角色信息
     document.getElementById('characterImage').innerHTML = `<img src="${character.image}" alt="${character.name}" class="character-portrait">`;
     document.getElementById('characterName').innerHTML = `<i class="ph-fill ph-star character-icon"></i>${character.name}`;
+    document.getElementById('similarity').textContent = `（相似度：${similarity}%）`;
     document.getElementById('mbtiType').textContent = `${character.mbti}型 - ${mbti}`;
     document.getElementById('characterDesc').textContent = character.desc;
     
@@ -471,6 +474,10 @@ function showResult() {
     
     // 显示魔法
     document.getElementById('characterMagic').innerHTML = `<strong>魔法能力：</strong>${character.magic}`;
+    
+    // 显示评价
+    const evaluation = generateEvaluation(mbti);
+    document.getElementById('characterEvaluation').innerHTML = `<i class="ph-fill ph-quotes"></i>${evaluation}`;
     
     // 显示统计数据
     showStats();
@@ -523,7 +530,68 @@ function findBestMatch(userMBTI) {
         }
     }
     
-    return bestMatch;
+    // 计算相似度 (0-4字母差异，转换为百分比)
+    const similarity = Math.round(((4 - minDifference) / 4) * 100);
+    
+    return { character: bestMatch, similarity: similarity };
+}
+
+// 生成用户评价
+function generateEvaluation(mbti) {
+    const evaluations = {
+        'E': {
+            'S': {
+                'T': {
+                    'J': '你是一个果断、务实、善于组织的人。你重视效率和结果，喜欢制定计划并按部就班地执行。在团队中，你往往是天生的领导者，能够迅速做出决策并带领他人实现目标。',
+                    'P': '你是一个灵活、机智、热爱冒险的人。你喜欢即兴发挥，善于应对突发状况。你精力充沛，喜欢尝试新事物，总能给周围的人带来活力和惊喜。'
+                },
+                'F': {
+                    'J': '你是一个热心、友善、善于合作的人。你重视和谐的人际关系，喜欢帮助他人。你有很强的责任感，总是尽力维护团队的团结和稳定。',
+                    'P': '你是一个热情、随和、享受生活的人。你喜欢与人交往，善于营造轻松愉快的氛围。你活在当下，懂得欣赏生活中的美好。'
+                }
+            },
+            'N': {
+                'T': {
+                    'J': '你是一个有远见、果断、善于规划的人。你能够洞察事物的本质，制定长远的目标并坚定执行。你自信、有魅力，往往能激励他人追随你的愿景。',
+                    'P': '你是一个充满创意、机智、善于应变的人。你思维活跃，喜欢探索各种可能性。你善于言辞，能够用新颖的观点启发他人。'
+                },
+                'F': {
+                    'J': '你是一个理想主义、热情、善于激励他人的人。你关心他人的成长和发展，愿意为了实现共同的目标而付出努力。你有很强的感染力，能够凝聚人心。',
+                    'P': '你是一个充满激情、富有想象力、自由奔放的人。你追求自由和可能性，喜欢探索未知的领域。你真诚、热情，总能发现生活中的美好。'
+                }
+            }
+        },
+        'I': {
+            'S': {
+                'T': {
+                    'J': '你是一个沉稳、细致、可靠的人。你注重细节，善于分析和解决实际问题。你喜欢按照既定的方式做事，是团队中值得信赖的支柱。',
+                    'P': '你是一个冷静、灵活、善于观察的人。你喜欢独自探索，善于发现事物的规律。你低调而务实，总能在关键时刻提供独到的见解。'
+                },
+                'F': {
+                    'J': '你是一个温柔、体贴、忠诚的人。你重视传统和稳定，喜欢照顾他人的感受。你默默付出，用行动表达对家人和朋友的关心。',
+                    'P': '你是一个敏感、艺术气质、注重内心感受的人。你喜欢独处，享受属于自己的时光。你有独特的审美，善于发现生活中的诗意。'
+                }
+            },
+            'N': {
+                'T': {
+                    'J': '你是一个独立、深思熟虑、有远见的人。你善于战略思考，喜欢探索复杂的理论和概念。你追求完美，对自己和他人都有很高的标准。',
+                    'P': '你是一个充满好奇心、灵活、富有创造力的人。你喜欢思考各种可能性，善于发现事物之间的联系。你随性而为，享受探索的过程。'
+                },
+                'F': {
+                    'J': '你是一个有洞察力、理想主义、富有同情心的人。你关心他人的内心世界，善于理解和安慰他人。你有坚定的信念，愿意为了理想而努力。',
+                    'P': '你是一个敏感、富有想象力、追求内心和谐的人。你重视个人价值观，喜欢探索生命的意义。你温和、包容，能够理解各种不同的观点。'
+                }
+            }
+        }
+    };
+    
+    // 获取评价，如果不存在则返回默认评价
+    const type1 = evaluations[mbti[0]];
+    const type2 = type1?.[mbti[1]];
+    const type3 = type2?.[mbti[2]];
+    const evaluation = type3?.[mbti[3]];
+    
+    return evaluation || '你是一个独特而复杂的人，拥有多面的性格特质。你的内心世界丰富而深邃，既有着理性的一面，也有着感性的一面。这种独特的组合让你成为一个不可替代的个体。';
 }
 
 // 显示统计数据
