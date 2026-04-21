@@ -897,7 +897,23 @@ body {
 /* 响应式设计 */
 @media (max-width: 768px) {
     .container {
-        padding: 20px 15px;
+        padding: 60px 15px 20px;
+    }
+    
+    /* BGM按钮调整 */
+    .bgm-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+    
+    .bgm-icon {
+        font-size: 1.2em;
+    }
+    
+    .bgm-text {
+        display: none;
     }
     
     .game-title h1 {
@@ -929,31 +945,137 @@ body {
     .character-info h2 {
         font-size: 1.8em;
     }
+    
+    /* 进度容器调整 */
+    .progress-container {
+        margin-top: 10px;
+    }
+    
+    /* 选项按钮调整 */
+    .option-btn {
+        padding: 18px 20px 18px 45px;
+        font-size: 1em;
+    }
+    
+    .option-btn::before {
+        left: 15px;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 10px solid #8b0000;
+    }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 55px 12px 15px;
+    }
+    
+    /* 背景装饰移动端调整 */
+    .spider-web {
+        width: 100px;
+        height: 100px;
+        opacity: 0.05;
+    }
+    
+    .butterfly {
+        width: 20px;
+        height: 20px;
+    }
+    
     .game-title h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
+    }
+    
+    .game-title h1::before,
+    .game-title h1::after {
+        display: none;
     }
     
     .intro-frame,
     .question-frame,
     .character-frame,
     .result-stats {
-        padding: 20px;
+        padding: 20px 15px;
     }
     
     .question {
-        font-size: 1.2em;
+        font-size: 1.1em;
+    }
+    
+    /* 选项按钮移动端优化 */
+    .options {
+        gap: 12px;
     }
     
     .option-btn {
-        padding: 15px 20px;
-        font-size: 1em;
+        padding: 16px 15px 16px 38px;
+        font-size: 0.95em;
+        line-height: 1.5;
+        border-radius: 8px;
+    }
+    
+    .option-btn::before {
+        left: 12px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 8px solid #8b0000;
+    }
+    
+    .option-btn:hover {
+        transform: translateX(8px) scale(1.01);
     }
     
     .character-image {
         width: 140px;
         height: 190px;
+    }
+    
+    /* 角色头部调整 */
+    .character-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .character-header h2 {
+        font-size: 1.6em;
+    }
+    
+    .similarity {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+    
+    /* MBTI类型调整 */
+    .mbti-type {
+        font-size: 1.1em;
+        padding: 8px 20px;
+    }
+    
+    /* 特质标签调整 */
+    .trait-tag {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+    
+    /* 评价区域调整 */
+    .character-evaluation {
+        padding: 18px;
+        font-size: 0.95em;
+    }
+    
+    /* 菜单按钮调整 */
+    .menu-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 15px 30px;
+    }
+    
+    /* 进度条调整 */
+    .progress-bar {
+        height: 6px;
+    }
+    
+    .question-number {
+        font-size: 0.85em;
     }
 }
